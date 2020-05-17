@@ -1,7 +1,9 @@
 #ifndef ENERGY_H
 #define  ENERGY_H
 
-class Energy
+#include "Element.h"
+
+class Energy : public Element
 {
 };
 

@@ -10,6 +10,7 @@ public:
 protected:
 	Element result;
 	void execute(); // ? do we need this - probably yes
+	virtual bool containsElement(const Element&) = 0;
 };
 
 #endif // !FORMULA_H

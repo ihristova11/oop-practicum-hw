@@ -7,7 +7,7 @@
 
 int main()
 {
-    std::vector<Formula> formulas;
+    std::vector<Formula*> formulas;
     Book book(formulas);
     Alchemist alchemist(book);
 

@@ -1,7 +1,9 @@
 #ifndef FIRE_H
 #define FIRE_H
 
-class Fire
+#include "Element.h"
+
+class Fire : public Element
 {
 };
 

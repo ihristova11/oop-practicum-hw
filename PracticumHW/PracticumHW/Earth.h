@@ -1,7 +1,9 @@
 #ifndef EARTH_H
 #define EARTH_H
 
-class Earth
+#include "Element.h"
+
+class Earth : public Element
 {
 };
 

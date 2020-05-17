@@ -1,7 +1,9 @@
 #ifndef SPIRIT_H
 #define SPIRIT_H
 
-class Spirit
+#include "Element.h"
+
+class Spirit : public Element
 {
 };
 

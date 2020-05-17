@@ -1,7 +1,9 @@
 #ifndef PHILOSOPHERS_STONE_H
 #define PHILOSOPHERS_STONE_H
 
-class PhilosophersStone
+#include "Element.h"
+
+class PhilosophersStone : public Element
 {
 };
 

@@ -1,6 +1,8 @@
 #ifndef GOLD_H
 #define GOLD_H
 
+#include "Element.h"
+
 class Gold
 {
 };

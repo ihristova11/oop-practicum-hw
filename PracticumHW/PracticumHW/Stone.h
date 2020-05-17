@@ -1,7 +1,9 @@
 #ifndef STONE_H
 #define STONE_H
 
-class Stone
+#include "Element.h"
+
+class Stone : public Element
 {
 };
 

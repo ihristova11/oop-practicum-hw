@@ -10,6 +10,9 @@ class Equation : public Formula
 {
 private:
 	std::vector<Element> elements;
+
+	// Inherited via Formula
+	virtual bool containsElement(const Element&) override;
 };
 
 #endif // !EQUATION_H

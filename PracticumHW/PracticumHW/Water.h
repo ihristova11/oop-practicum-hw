@@ -1,7 +1,9 @@
 #ifndef WATER_H
 #define WATER_H
 
-class Water
+#include "Element.h"
+
+class Water : public Element
 {
 };
 
