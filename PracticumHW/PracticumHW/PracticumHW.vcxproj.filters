@@ -13,66 +13,78 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Elements">
+      <UniqueIdentifier>{8216fa55-7f29-49d0-abbe-0852dfe090ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Elements">
+      <UniqueIdentifier>{64d699a0-565f-44aa-b3cd-3048c01a731f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="PracticumHW.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Air.cpp">
+      <Filter>Source Files\Elements</Filter>
     </ClCompile>
     <ClCompile Include="Earth.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Fire.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Water.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Air.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Metal.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Stone.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Elements</Filter>
     </ClCompile>
     <ClCompile Include="Energy.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Elements</Filter>
     </ClCompile>
-    <ClCompile Include="Spirit.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Fire.cpp">
+      <Filter>Source Files\Elements</Filter>
     </ClCompile>
     <ClCompile Include="Gold.cpp">
+      <Filter>Source Files\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="Metal.cpp">
+      <Filter>Source Files\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="PhilosophersStone.cpp">
+      <Filter>Source Files\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="Spirit.cpp">
+      <Filter>Source Files\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="Stone.cpp">
+      <Filter>Source Files\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="Water.cpp">
+      <Filter>Source Files\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="Startup.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Earth.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Fire.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Water.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Air.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Metal.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Elements</Filter>
     </ClInclude>
     <ClInclude Include="Stone.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Energy.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Elements</Filter>
     </ClInclude>
     <ClInclude Include="Spirit.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="PhilosophersStone.h">
+      <Filter>Header Files\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="Metal.h">
+      <Filter>Header Files\Elements</Filter>
     </ClInclude>
     <ClInclude Include="Gold.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="Fire.h">
+      <Filter>Header Files\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="Energy.h">
+      <Filter>Header Files\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="Earth.h">
+      <Filter>Header Files\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="Air.h">
+      <Filter>Header Files\Elements</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
