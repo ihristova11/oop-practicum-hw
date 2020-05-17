@@ -11,5 +11,5 @@ int main()
     Book book(formulas);
     Alchemist alchemist(book);
 
-    std::cout << alchemist.canComposePhilosophersStone();
+    std::cout << alchemist.canComposePhilosophersStone() << std::endl;
 }
