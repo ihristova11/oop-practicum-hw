@@ -8,9 +8,15 @@
 class Book
 {
 public: 
+	Book();
+	Book(const std::vector<Formula>&);
+	Book(const Book&);
+	Book& operator=(const Book&);
 	void findComposition();
 private:
 	std::vector<Formula> formulas;
+
+	void transferInternals(const std::vector<Formula>&);
 };
 
 #endif // !BOOK_H

@@ -9,10 +9,11 @@
 class Alchemist
 {
 public:
+	Alchemist(const Book&);
 	bool canComposePhilosophersStone();
 private:
 	Book book;
-	std::vector<Element> elements;
+	std::vector<std::pair<int,Element>> elementsQuantity;
 };
 
 #endif // !ALCHEMIST_H
