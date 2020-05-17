@@ -30,3 +30,13 @@ void Book::transferInternals(const std::vector<Formula*>& formulas)
 		this->formulas.push_back(formula);
 	}
 }
+
+void Book::validateFormulas()
+{
+	// for each formula - check if the elements in vector can interact with each other
+	for (Formula* formula: this->formulas)
+	{
+		// if can interact 
+		this->validFormulas.push_back(formula);
+	}
+}

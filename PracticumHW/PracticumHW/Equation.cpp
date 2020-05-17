@@ -22,5 +22,6 @@ bool Equation::containsElement(const Element* element)
 
 std::pair<Element, Element> Equation::execute()
 {
+
 	return std::pair<Element, Element>();
 }

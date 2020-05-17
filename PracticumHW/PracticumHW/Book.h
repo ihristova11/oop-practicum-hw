@@ -15,8 +15,9 @@ public:
 	void findComposition(); // used to search within the formulas
 private:
 	std::vector<Formula*> formulas;
-
+	std::vector<Formula*> validFormulas;
 	void transferInternals(const std::vector<Formula*>&);
+	void validateFormulas(); // seeds validFormulas
 };
 
 #endif // !BOOK_H
