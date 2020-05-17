@@ -2,8 +2,9 @@
 #define GOLD_H
 
 #include "Element.h"
+#include "Metal.h"
 
-class Gold
+class Gold : public Metal, public Element
 {
 };
 
