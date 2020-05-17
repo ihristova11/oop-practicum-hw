@@ -150,9 +150,11 @@
     <ClCompile Include="Air.cpp" />
     <ClCompile Include="Alchemist.cpp" />
     <ClCompile Include="Book.cpp" />
+    <ClCompile Include="Decomposition.cpp" />
     <ClCompile Include="Earth.cpp" />
     <ClCompile Include="Element.cpp" />
     <ClCompile Include="Energy.cpp" />
+    <ClCompile Include="Equation.cpp" />
     <ClCompile Include="Fire.cpp" />
     <ClCompile Include="Formula.cpp" />
     <ClCompile Include="Gold.cpp" />
@@ -167,9 +169,11 @@
     <ClInclude Include="Air.h" />
     <ClInclude Include="Alchemist.h" />
     <ClInclude Include="Book.h" />
+    <ClInclude Include="Decomposition.h" />
     <ClInclude Include="Earth.h" />
     <ClInclude Include="Element.h" />
     <ClInclude Include="Energy.h" />
+    <ClInclude Include="Equation.h" />
     <ClInclude Include="Fire.h" />
     <ClInclude Include="Formula.h" />
     <ClInclude Include="Gold.h" />

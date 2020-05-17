@@ -3,6 +3,8 @@
 
 class Element
 {
+public:
+	
 };
 
 #endif // !ELEMENT_H

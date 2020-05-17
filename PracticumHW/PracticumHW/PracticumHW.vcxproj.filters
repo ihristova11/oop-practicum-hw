@@ -19,6 +19,18 @@
     <Filter Include="Source Files\Elements">
       <UniqueIdentifier>{64d699a0-565f-44aa-b3cd-3048c01a731f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Formulas">
+      <UniqueIdentifier>{34118196-3acf-4d53-9c30-325506259b46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Formulas">
+      <UniqueIdentifier>{7168d1e2-d64a-4e61-b69a-1e1b7eb6947f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Common">
+      <UniqueIdentifier>{bf9645a0-292c-4129-8c00-61c63fba8458}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common">
+      <UniqueIdentifier>{0fd04155-9937-4921-a5b5-26668d866867}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Air.cpp">
@@ -60,11 +72,17 @@
     <ClCompile Include="Book.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Element.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Formula.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Formulas</Filter>
+    </ClCompile>
+    <ClCompile Include="Element.cpp">
+      <Filter>Source Files\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="Equation.cpp">
+      <Filter>Source Files\Formulas</Filter>
+    </ClCompile>
+    <ClCompile Include="Decomposition.cpp">
+      <Filter>Source Files\Formulas</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -108,7 +126,13 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Formula.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Formulas</Filter>
+    </ClInclude>
+    <ClInclude Include="Equation.h">
+      <Filter>Header Files\Formulas</Filter>
+    </ClInclude>
+    <ClInclude Include="Decomposition.h">
+      <Filter>Header Files\Formulas</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
