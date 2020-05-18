@@ -12,6 +12,9 @@ public:
 	virtual	std::unordered_set<ElementType> getCompositions() = 0; //a.k.a parents
 	virtual std::unordered_set<ElementType> getInteractions() = 0;
 	bool operator==(const Element&);
+	bool canInteractWith(const std::vector<Element*>&);
+protected:
+	ElementType type;
 };
 
 #endif // !ELEMENT_H

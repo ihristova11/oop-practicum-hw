@@ -16,6 +16,9 @@ private:
 	// Inherited via Formula
 	virtual std::pair<Element*, Element*> execute() override;
 	virtual bool containsElement(const Element*) override;
+
+	// Inherited via Formula
+	virtual bool isValid() override;
 };
 
 #endif // !DECOMPOSITION_H

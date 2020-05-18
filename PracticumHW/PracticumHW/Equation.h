@@ -16,6 +16,7 @@ private:
 
 	virtual bool containsElement(const Element*) override;
 	virtual std::pair<Element*, Element*> execute() override;
+	virtual bool isValid() override;
 };
 
 #endif // !EQUATION_H

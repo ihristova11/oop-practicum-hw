@@ -15,3 +15,8 @@ bool Decomposition::containsElement(const Element*) //not sure if needed ?
 {
 	return false;
 }
+
+bool Decomposition::isValid()
+{
+	return true;
+}
