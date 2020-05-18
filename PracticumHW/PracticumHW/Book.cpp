@@ -25,7 +25,7 @@ Book& Book::operator=(const Book& other)
 
 void Book::transferInternals(const std::vector<Formula*>& formulas)
 {
-	for (Formula* formula: formulas)
+	for (Formula* formula : formulas)
 	{
 		this->formulas.push_back(formula);
 	}
@@ -33,10 +33,11 @@ void Book::transferInternals(const std::vector<Formula*>& formulas)
 
 void Book::validateFormulas()
 {
-	// for each formula - check if the elements in vector can interact with each other
-	for (Formula* formula: this->formulas)
+	for (Formula* formula : this->formulas)
 	{
-		// if can interact 
-		this->validFormulas.push_back(formula);
+		if (formula->isValid())
+		{
+			this->validFormulas.push_back(formula);
+		}
 	}
 }
