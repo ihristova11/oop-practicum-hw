@@ -6,6 +6,7 @@ Book::Book()
 Book::Book(const std::vector<Formula*>& formulas)
 {
 	this->transferInternals(formulas);
+	this->validateFormulas();
 }
 
 Book::Book(const Book& other)
@@ -21,6 +22,18 @@ Book& Book::operator=(const Book& other)
 	}
 
 	return *this;
+}
+
+Formula* Book::getFormula(Element* element)
+{
+	for (Formula* formula : this->validFormulas)
+	{
+		if (*formula->getResult() == *element) // or tostring()
+		{
+			return formula;
+		}
+	}
+	return nullptr;
 }
 
 Formula* Book::getPhilosophersStoneFormula()

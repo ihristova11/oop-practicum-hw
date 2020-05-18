@@ -16,6 +16,29 @@ bool Alchemist::canComposePhilosophersStone()
 	}
 	else
 	{
+		std::vector<Element*> foundInBook;
+
+		Formula* philosophers = this->book.getPhilosophersStoneFormula();
+		calc(philosophers->getElements(), foundInBook);
+
+
+
+
 		// update alchemist resources
+	}
+}
+
+Element* Alchemist::calc(std::vector<Element*> elements, std::vector<Element*> res)
+{
+	for (Element* el : elements)
+	{
+		if (el->getType() != ElementType::COMPOSITE)
+		{
+			// add to vector
+			res.push_back(el);
+			return el;
+		}
+
+		calc(this->book.getFormula(el)->getElements(), res);
 	}
 }

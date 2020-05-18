@@ -1,7 +1,9 @@
 #include "Decomposition.h"
 
-Decomposition::Decomposition(Element* element) : element(element)
-{ }
+Decomposition::Decomposition(Element* element)
+{
+	Formula::elements = std::vector<Element*>{ element };
+}
 
 std::pair<Element*, Element*> Decomposition::execute()
 {

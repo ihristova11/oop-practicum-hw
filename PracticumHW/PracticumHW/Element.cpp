@@ -10,10 +10,12 @@ bool Element::operator==(const Element& rhs)
 bool Element::canInteractWith(const std::vector<Element*>& elements)
 {
 	bool canInteract = true;
+	std::unordered_set<ElementType> interactions = this->getInteractions();
+
 	for (Element* el : elements)
 	{
-		std::unordered_set<ElementType>::iterator found = this->getInteractions().find(el->type);
-		if (found == this->getInteractions().end()) // element not found
+		std::unordered_set<ElementType>::const_iterator found = interactions.find(el->type);
+		if (found == interactions.end()) // element not found
 		{
 			canInteract = false;
 			break;

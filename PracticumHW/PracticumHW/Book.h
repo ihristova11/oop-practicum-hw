@@ -13,7 +13,7 @@ public:
 	Book(const Book&);
 	Book& operator=(const Book&);
 	void findComposition(); // used to search within the formulas
-
+	Formula* getFormula(Element*);
 	Formula* getPhilosophersStoneFormula();
 
 private:

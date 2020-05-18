@@ -34,7 +34,7 @@ bool Equation::isValid() // todo: check
 	{
 		// check if element can interact 
 		std::vector<Element*> temp;
-		copy(this->elements.begin(), this->elements.end(), back_inserter(temp));
+		temp = this->elements;
 		temp.erase(temp.begin() + i);
 		isValid = isValid && this->elements[i]->canInteractWith(temp);
 	}

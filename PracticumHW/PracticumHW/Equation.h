@@ -11,9 +11,8 @@ class Equation : public Formula
 {
 public:
 	Equation(std::vector<Element*>, Element*);
-private:
-	std::vector<Element*> elements;
 
+private:
 	virtual bool containsElement(const Element*) override;
 	virtual std::pair<Element*, Element*> execute() override;
 	virtual bool isValid() override;
