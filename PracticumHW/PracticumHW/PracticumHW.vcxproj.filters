@@ -72,9 +72,6 @@
     <ClCompile Include="Book.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Formula.cpp">
-      <Filter>Source Files\Formulas</Filter>
-    </ClCompile>
     <ClCompile Include="Element.cpp">
       <Filter>Source Files\Elements</Filter>
     </ClCompile>
@@ -83,12 +80,6 @@
     </ClCompile>
     <ClCompile Include="Decomposition.cpp">
       <Filter>Source Files\Formulas</Filter>
-    </ClCompile>
-    <ClCompile Include="Composition.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Interaction.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -140,11 +131,8 @@
     <ClInclude Include="Element.h">
       <Filter>Header Files\Elements</Filter>
     </ClInclude>
-    <ClInclude Include="Composition.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Interaction.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="ElementType.h">
+      <Filter>Header Files\Common</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -5,8 +5,11 @@
 #include "Water.h"
 #include "Air.h"
 
-class Energy : public Air, public Water, public Element
+class Energy : public Air, public Water, virtual public Element
 {
+public:
+	virtual std::unordered_set<ElementType> getCompositions() override;
+	virtual std::unordered_set<ElementType> getInteractions() override;
 };
 
 #endif // !ENERGY_H

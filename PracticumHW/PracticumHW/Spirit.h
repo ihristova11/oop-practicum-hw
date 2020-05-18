@@ -4,8 +4,11 @@
 #include "Element.h"
 #include "Air.h"
 
-class Spirit : public Air, public Element
+class Spirit : public Air, public virtual Element
 {
+public:
+	virtual std::unordered_set<ElementType> getCompositions() override;
+	virtual std::unordered_set<ElementType> getInteractions() override;
 };
 
 #endif // !SPIRIT_H

@@ -14,11 +14,8 @@ public:
 private:
 	std::vector<Element*> elements;
 
-	// Inherited via Formula
 	virtual bool containsElement(const Element*) override;
-
-	// Inherited via Formula
-	virtual std::pair<Element, Element> execute() override;
+	virtual std::pair<Element*, Element*> execute() override;
 };
 
 #endif // !EQUATION_H

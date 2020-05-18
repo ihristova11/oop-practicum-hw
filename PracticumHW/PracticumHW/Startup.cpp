@@ -20,7 +20,7 @@ int main()
 {
 	std::vector<Formula*> formulas =
 	{
-		new Equation(std::vector<Element*> { new Air, new Air}, new Spirit),
+		new Equation(std::vector<Element*> {new Air, new Air}, new Spirit),
 		new Equation(std::vector<Element*> {new Metal, new Stone}, new Gold),
 		new Equation(std::vector<Element*> {new Fire, new Earth}, new Metal),
 		new Equation(std::vector<Element*> {new Fire, new Water, new Earth}, new Gold),

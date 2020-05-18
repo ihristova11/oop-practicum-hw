@@ -12,7 +12,7 @@ public:
 	bool isValid();
 protected:
 	Element* result;
-	virtual std::pair<Element, Element> execute() = 0; // ? do we need this - probably yes
+	virtual std::pair<Element*, Element*> execute() = 0; // ? do we need this - probably yes
 	virtual bool containsElement(const Element*) = 0;
 };
 

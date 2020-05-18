@@ -1,14 +1,16 @@
 #ifndef ELEMENT_H
 #define ELEMENT_H
 
-#include "Composition.h"
-#include "Interaction.h"
+#include <vector>
+#include <unordered_set>
+
+#include "ElementType.h"
 
 class Element
 {
 public:
-	Composition composition;
-	Interaction interaction;
+	virtual	std::unordered_set<ElementType> getCompositions() = 0; //a.k.a parents
+	virtual std::unordered_set<ElementType> getInteractions() = 0;
 	bool operator==(const Element&);
 };
 

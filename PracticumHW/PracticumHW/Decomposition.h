@@ -14,7 +14,7 @@ private:
 	Element* element;
 
 	// Inherited via Formula
-	virtual std::pair<Element, Element> execute() override;
+	virtual std::pair<Element*, Element*> execute() override;
 	virtual bool containsElement(const Element*) override;
 };
 
