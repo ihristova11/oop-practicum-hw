@@ -2,13 +2,20 @@
 
 std::unordered_set<ElementType> Gold::getCompositions()
 {
-	// get compositions of base class
-	Metal::getCompositions();
-	return std::unordered_set<ElementType>();
+	std::unordered_set<ElementType> result;
+	std::unordered_set<ElementType> metalCompositions = Metal::getCompositions();
+
+	result.insert(metalCompositions.begin(), metalCompositions.end());
+
+	return result;
 }
 
 std::unordered_set<ElementType> Gold::getInteractions()
 {
-	Metal::getInteractions();
-	return std::unordered_set<ElementType>();
+	std::unordered_set<ElementType> result;
+	std::unordered_set<ElementType> metalInteractions = Metal::getInteractions();
+
+	result.insert(metalInteractions.begin(), metalInteractions.end());
+
+	return result;
 }

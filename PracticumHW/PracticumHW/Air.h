@@ -8,7 +8,6 @@
 class Air : public Element
 {
 public:
-	// Inherited via Element
 	virtual std::unordered_set<ElementType> getCompositions() override;
 	virtual std::unordered_set<ElementType> getInteractions() override;
 };

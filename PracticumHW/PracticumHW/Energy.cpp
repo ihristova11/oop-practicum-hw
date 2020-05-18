@@ -2,14 +2,17 @@
 
 std::unordered_set<ElementType> Energy::getCompositions()
 {
-	// get compositions of base classes
 	return std::unordered_set<ElementType>{ElementType::AIR, ElementType::WATER};
 }
 
 std::unordered_set<ElementType> Energy::getInteractions()
 {
 	std::unordered_set<ElementType> result;
-	Water::getInteractions();
-	Air::getInteractions();
+	std::unordered_set<ElementType> waterInteractions = Water::getInteractions();
+	std::unordered_set<ElementType> airInteractions = Air::getInteractions();
+
+	result.insert(waterInteractions.begin(), waterInteractions.end());
+	result.insert(airInteractions.begin(), airInteractions.end());
+
 	return result;
 }
