@@ -6,6 +6,7 @@
 class Earth : public Element
 {
 public:
+	Earth();
 	virtual std::unordered_set<ElementType> getCompositions() override;
 	virtual std::unordered_set<ElementType> getInteractions() override;
 };

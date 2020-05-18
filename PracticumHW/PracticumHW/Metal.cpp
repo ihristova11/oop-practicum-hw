@@ -1,5 +1,10 @@
 #include "Metal.h"
 
+Metal::Metal()
+{
+	Element::type = ElementType::COMPOSITE;
+}
+
 std::unordered_set<ElementType> Metal::getCompositions()
 {
 	return std::unordered_set<ElementType> {ElementType::FIRE, ElementType::EARTH};

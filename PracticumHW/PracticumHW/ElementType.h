@@ -5,7 +5,9 @@ enum ElementType {
 	FIRE, 
 	WATER, 
 	AIR, 
-	EARTH
+	EARTH, 
+	PHILOSOPHERS_STONE, 
+	COMPOSITE
 };
 
 #endif // !ELEMENT_TYPE_H

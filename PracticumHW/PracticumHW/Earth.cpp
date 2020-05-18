@@ -1,5 +1,10 @@
 #include "Earth.h"
 
+Earth::Earth()
+{
+	Element::type = ElementType::EARTH;
+}
+
 std::unordered_set<ElementType> Earth::getCompositions()
 {
 	return std::unordered_set<ElementType>();

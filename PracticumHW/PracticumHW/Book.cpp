@@ -23,6 +23,21 @@ Book& Book::operator=(const Book& other)
 	return *this;
 }
 
+Formula* Book::getPhilosophersStoneFormula()
+{
+	Formula* res = nullptr;
+	for (Formula* formula : this->validFormulas)
+	{
+		if (formula->getResult()->getType() == ElementType::PHILOSOPHERS_STONE)
+		{
+			res = formula;
+			break;
+		}
+	}
+
+	return res;
+}
+
 void Book::transferInternals(const std::vector<Formula*>& formulas)
 {
 	for (Formula* formula : formulas)

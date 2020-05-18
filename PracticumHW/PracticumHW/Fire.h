@@ -6,6 +6,7 @@
 class Fire : public Element
 {
 public:
+	Fire();
 	virtual std::unordered_set<ElementType> getCompositions() override;
 	virtual std::unordered_set<ElementType> getInteractions() override;
 

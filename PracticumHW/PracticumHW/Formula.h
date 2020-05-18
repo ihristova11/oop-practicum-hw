@@ -10,6 +10,8 @@ class Formula
 {
 public: 
 	virtual bool isValid() = 0;
+	
+	Element* getResult() const;
 protected:
 	Element* result;
 	virtual std::pair<Element*, Element*> execute() = 0; // ? do we need this - probably yes

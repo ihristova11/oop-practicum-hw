@@ -8,6 +8,7 @@
 class Air : public Element
 {
 public:
+	Air();
 	virtual std::unordered_set<ElementType> getCompositions() override;
 	virtual std::unordered_set<ElementType> getInteractions() override;
 };

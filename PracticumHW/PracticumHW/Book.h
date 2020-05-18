@@ -13,6 +13,9 @@ public:
 	Book(const Book&);
 	Book& operator=(const Book&);
 	void findComposition(); // used to search within the formulas
+
+	Formula* getPhilosophersStoneFormula();
+
 private:
 	std::vector<Formula*> formulas;
 	std::vector<Formula*> validFormulas;

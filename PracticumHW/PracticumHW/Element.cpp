@@ -21,3 +21,8 @@ bool Element::canInteractWith(const std::vector<Element*>& elements)
 	}
 	return canInteract;
 }
+
+ElementType Element::getType() const
+{
+	return this->type;
+}

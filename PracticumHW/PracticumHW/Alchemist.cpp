@@ -10,5 +10,12 @@ Alchemist::Alchemist(const Book& book, std::vector<std::pair<int, Element*>> ele
 
 bool Alchemist::canComposePhilosophersStone()
 {
-	return false;
+	if (this->book.getPhilosophersStoneFormula() == nullptr)
+	{
+		return false;
+	}
+	else
+	{
+		// update alchemist resources
+	}
 }

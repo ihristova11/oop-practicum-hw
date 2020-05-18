@@ -7,6 +7,7 @@
 class Spirit : public Air, public virtual Element
 {
 public:
+	Spirit();
 	virtual std::unordered_set<ElementType> getCompositions() override;
 	virtual std::unordered_set<ElementType> getInteractions() override;
 };

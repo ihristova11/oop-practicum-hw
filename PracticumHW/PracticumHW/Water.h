@@ -6,6 +6,7 @@
 class Water : public Element
 {
 public:
+	Water();
 	virtual std::unordered_set<ElementType> getCompositions() override;
 	virtual std::unordered_set<ElementType> getInteractions() override;
 };

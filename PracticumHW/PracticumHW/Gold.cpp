@@ -1,5 +1,10 @@
 #include "Gold.h"
 
+Gold::Gold()
+{
+	Element::type = ElementType::COMPOSITE;
+}
+
 std::unordered_set<ElementType> Gold::getCompositions()
 {
 	std::unordered_set<ElementType> result;

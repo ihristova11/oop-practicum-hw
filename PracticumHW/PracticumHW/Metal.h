@@ -8,6 +8,7 @@
 class Metal : public Fire, public Earth, public Element
 {
 public:
+	Metal();
 	virtual std::unordered_set<ElementType> getCompositions() override;
 	virtual std::unordered_set<ElementType> getInteractions() override;
 };

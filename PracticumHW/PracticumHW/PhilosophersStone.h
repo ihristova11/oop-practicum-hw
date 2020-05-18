@@ -10,6 +10,7 @@
 class PhilosophersStone : public Air, public Water, public Earth, public Fire, virtual public Element
 {
 public:
+	PhilosophersStone();
 	virtual std::unordered_set<ElementType> getCompositions() override;
 	virtual std::unordered_set<ElementType> getInteractions() override;
 };

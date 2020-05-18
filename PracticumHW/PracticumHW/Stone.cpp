@@ -1,5 +1,10 @@
 #include "Stone.h"
 
+Stone::Stone()
+{
+	Element::type == ElementType::COMPOSITE;
+}
+
 std::unordered_set<ElementType> Stone::getCompositions()
 {
 	return std::unordered_set<ElementType> {ElementType::WATER, ElementType::FIRE};

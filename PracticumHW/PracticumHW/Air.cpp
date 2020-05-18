@@ -1,5 +1,10 @@
 #include "Air.h"
 
+Air::Air()
+{
+	Element::type = ElementType::AIR;
+}
+
 std::unordered_set<ElementType> Air::getCompositions()
 {
 	return std::unordered_set<ElementType>();

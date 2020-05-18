@@ -8,6 +8,7 @@
 class Stone : public Fire, public Water, public virtual Element
 {
 public:
+	Stone();
 	virtual std::unordered_set<ElementType> getCompositions() override;
 	virtual std::unordered_set<ElementType> getInteractions() override;
 };

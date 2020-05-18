@@ -1,5 +1,10 @@
 #include "Energy.h"
 
+Energy::Energy()
+{
+	Element::type = ElementType::COMPOSITE;
+}
+
 std::unordered_set<ElementType> Energy::getCompositions()
 {
 	return std::unordered_set<ElementType>{ElementType::AIR, ElementType::WATER};

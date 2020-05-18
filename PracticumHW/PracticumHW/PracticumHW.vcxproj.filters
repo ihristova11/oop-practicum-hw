@@ -81,6 +81,9 @@
     <ClCompile Include="Decomposition.cpp">
       <Filter>Source Files\Formulas</Filter>
     </ClCompile>
+    <ClCompile Include="Formula.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Water.h">

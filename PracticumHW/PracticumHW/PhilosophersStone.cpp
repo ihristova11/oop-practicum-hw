@@ -1,5 +1,10 @@
 #include "PhilosophersStone.h"
 
+PhilosophersStone::PhilosophersStone() 
+{
+	Element::type = ElementType::PHILOSOPHERS_STONE;
+}
+
 std::unordered_set<ElementType> PhilosophersStone::getCompositions()
 {
 	return std::unordered_set<ElementType>{ElementType::FIRE, ElementType::WATER, ElementType::AIR, ElementType::EARTH};

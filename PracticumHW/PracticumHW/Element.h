@@ -13,6 +13,8 @@ public:
 	virtual std::unordered_set<ElementType> getInteractions() = 0;
 	bool operator==(const Element&);
 	bool canInteractWith(const std::vector<Element*>&);
+
+	ElementType getType() const;
 protected:
 	ElementType type;
 };

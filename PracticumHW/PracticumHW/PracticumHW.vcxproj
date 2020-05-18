@@ -156,6 +156,7 @@
     <ClCompile Include="Energy.cpp" />
     <ClCompile Include="Equation.cpp" />
     <ClCompile Include="Fire.cpp" />
+    <ClCompile Include="Formula.cpp" />
     <ClCompile Include="Gold.cpp" />
     <ClCompile Include="Metal.cpp" />
     <ClCompile Include="PhilosophersStone.cpp" />

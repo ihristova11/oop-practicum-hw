@@ -1,5 +1,10 @@
 #include "Fire.h"
 
+Fire::Fire()
+{
+	Element::type = ElementType::FIRE;
+}
+
 std::unordered_set<ElementType> Fire::getCompositions()
 {
 	return std::unordered_set<ElementType>();
