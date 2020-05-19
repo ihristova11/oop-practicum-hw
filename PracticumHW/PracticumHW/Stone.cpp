@@ -2,7 +2,7 @@
 
 Stone::Stone()
 {
-	Element::type == ElementType::COMPOSITE;
+	Element::type = ElementType::COMPOSITE;
 }
 
 std::unordered_set<ElementType> Stone::getCompositions()
