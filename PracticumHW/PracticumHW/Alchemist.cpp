@@ -1,4 +1,6 @@
 #include "Alchemist.h"
+#include "PhilosophersStone.h"
+
 #include <utility>
 #include <vector>
 
@@ -10,35 +12,22 @@ Alchemist::Alchemist(const Book& book, std::vector<std::pair<int, Element*>> ele
 
 bool Alchemist::canComposePhilosophersStone()
 {
-	if (this->book.getPhilosophersStoneFormula() == nullptr)
-	{
-		return false;
-	}
-	else
-	{
-		std::vector<Element*> foundInBook;
-
-		Formula* philosophers = this->book.getPhilosophersStoneFormula();
-		calc(philosophers->getElements(), foundInBook);
-
-
-
-
-		// update alchemist resources
-	}
+	razparchatosai(this->book.getPhilosophersStone());
+	return false; // shtoto to sig nqma da trygne i bez tva
 }
 
-Element* Alchemist::calc(std::vector<Element*> elements, std::vector<Element*> res)
+void Alchemist::razparchatosai(Element* element)
 {
-	for (Element* el : elements)
+	if (element->getType() != ElementType::COMPOSITE && element->getType() != ElementType::PHILOSOPHERS_STONE)
 	{
-		if (el->getType() != ElementType::COMPOSITE)
-		{
-			// add to vector
-			res.push_back(el);
-			return el;
-		}
-
-		calc(this->book.getFormula(el)->getElements(), res);
+		this->book.razparchatosani.push_back(element);
+		return;
+	}
+	Formula* formula = this->book.getFormula(element);
+	if (formula == nullptr)
+		return; // tuka ne e dobre polojenieto
+	for (Element* e: formula->getElements())
+	{
+		razparchatosai(e);
 	}
 }

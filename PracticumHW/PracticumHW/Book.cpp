@@ -5,30 +5,48 @@ Book::Book()
 
 Book::Book(const std::vector<Formula*>& formulas)
 {
-	this->transferInternals(formulas);
+	//this->transferInternals(formulas);
+	this->formulas = formulas;
 	this->validateFormulas();
 }
 
 Book::Book(const Book& other)
 {
-	this->transferInternals(other.formulas);
+	//this->transferInternals(other.formulas);
+	this->formulas = other.formulas;
+	this->validFormulas = other.validFormulas;
+	this->razparchatosani = other.razparchatosani;
 }
 
 Book& Book::operator=(const Book& other)
 {
 	if (this != &other)
 	{
-		this->transferInternals(other.formulas);
+		this->formulas = other.formulas;
+		this->validFormulas = other.validFormulas;
+		this->razparchatosani = other.razparchatosani;
 	}
 
 	return *this;
 }
 
-Formula* Book::getFormula(Element* element)
+Element* Book::getPhilosophersStone()
+{
+	for (Formula* f : this->formulas)
+	{
+		if (f->getResult()->getType() == ElementType::PHILOSOPHERS_STONE)
+		{
+			return f->getResult();
+		}
+	}
+	return nullptr;
+}
+
+Formula* Book::getFormula(Element* e)
 {
 	for (Formula* formula : this->validFormulas)
 	{
-		if (*formula->getResult() == *element) // or tostring()
+		if (formula->getResult() == e) // or tostring()
 		{
 			return formula;
 		}
@@ -36,28 +54,14 @@ Formula* Book::getFormula(Element* element)
 	return nullptr;
 }
 
-Formula* Book::getPhilosophersStoneFormula()
-{
-	Formula* res = nullptr;
-	for (Formula* formula : this->validFormulas)
-	{
-		if (formula->getResult()->getType() == ElementType::PHILOSOPHERS_STONE)
-		{
-			res = formula;
-			break;
-		}
-	}
-
-	return res;
-}
-
-void Book::transferInternals(const std::vector<Formula*>& formulas)
-{
-	for (Formula* formula : formulas)
-	{
-		this->formulas.push_back(formula);
-	}
-}
+//void Book::transferInternals(const std::vector<Formula*>& formulas)
+//{
+//	this->formulas = formulas;
+//	/*for (Formula* formula : formulas)
+//	{
+//		this->formulas.push_back(formula);
+//	}*/
+//}
 
 void Book::validateFormulas()
 {
