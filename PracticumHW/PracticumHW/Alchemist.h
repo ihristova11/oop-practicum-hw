@@ -13,7 +13,7 @@ public:
 	bool canComposePhilosophersStone();
 
 	Element* calc(std::vector<Element*> elements, std::vector<Element*> res);
-	void razparchatosai(Element*);
+	void splitComposition(Element*);
 private:
 	Book book;
 	std::vector<std::pair<int, Element*>> elementsQuantity;

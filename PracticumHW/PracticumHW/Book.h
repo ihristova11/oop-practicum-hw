@@ -13,7 +13,7 @@ public:
 	Book(const Book&);
 	Book& operator=(const Book&);
 
-	std::vector<Element*> razparchatosani;
+	std::vector<Element*> splitElements;
 	Element* getPhilosophersStone();
 
 	Formula* getFormula(Element*);

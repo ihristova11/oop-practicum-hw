@@ -14,7 +14,7 @@ Book::Book(const Book& other)
 	//this->transferInternals(other.formulas);
 	this->formulas = other.formulas;
 	this->validFormulas = other.validFormulas;
-	this->razparchatosani = other.razparchatosani;
+	this->splitElements = other.splitElements;
 }
 
 Book& Book::operator=(const Book& other)
@@ -23,7 +23,7 @@ Book& Book::operator=(const Book& other)
 	{
 		this->formulas = other.formulas;
 		this->validFormulas = other.validFormulas;
-		this->razparchatosani = other.razparchatosani;
+		this->splitElements = other.splitElements;
 	}
 
 	return *this;

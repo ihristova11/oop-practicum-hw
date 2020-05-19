@@ -14,7 +14,10 @@ bool Alchemist::canComposePhilosophersStone()
 {
 	splitComposition(this->book.getPhilosophersStone());
 
-	for (Element* e : this->book.razparchatosani)
+	if (this->book.splitElements.size() <= 0)
+		return false;
+
+	for (Element* e : this->book.splitElements)
 	{
 		for (std::pair<int, Element*> p : this->elementsQuantity)
 		{
@@ -38,7 +41,7 @@ void Alchemist::splitComposition(Element* element) // works ok, needs refactorin
 {
 	if (element->getType() != ElementType::COMPOSITE && element->getType() != ElementType::PHILOSOPHERS_STONE)
 	{
-		this->book.razparchatosani.push_back(element);
+		this->book.splitElements.push_back(element);
 		return;
 	}
 	Formula* formula = this->book.getFormula(element);
