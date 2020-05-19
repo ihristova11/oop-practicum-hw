@@ -21,3 +21,8 @@ std::unordered_set<ElementType> Energy::getInteractions()
 
 	return result;
 }
+
+std::string Energy::toString()
+{
+	return "energy";
+}

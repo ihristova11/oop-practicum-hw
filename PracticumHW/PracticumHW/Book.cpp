@@ -5,7 +5,6 @@ Book::Book()
 
 Book::Book(const std::vector<Formula*>& formulas)
 {
-	//this->transferInternals(formulas);
 	this->formulas = formulas;
 	this->validateFormulas();
 }
@@ -46,22 +45,13 @@ Formula* Book::getFormula(Element* e)
 {
 	for (Formula* formula : this->validFormulas)
 	{
-		if (formula->getResult() == e) // or tostring()
+		if (formula->getResult() != nullptr && formula->getResult()->toString() == e->toString()) // or tostring()
 		{
 			return formula;
 		}
 	}
 	return nullptr;
 }
-
-//void Book::transferInternals(const std::vector<Formula*>& formulas)
-//{
-//	this->formulas = formulas;
-//	/*for (Formula* formula : formulas)
-//	{
-//		this->formulas.push_back(formula);
-//	}*/
-//}
 
 void Book::validateFormulas()
 {

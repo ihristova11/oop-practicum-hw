@@ -21,3 +21,8 @@ std::unordered_set<ElementType> Metal::getInteractions()
 
 	return result;
 }
+
+std::string Metal::toString()
+{
+	return "metal";
+}

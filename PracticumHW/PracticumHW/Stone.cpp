@@ -21,3 +21,8 @@ std::unordered_set<ElementType> Stone::getInteractions()
 
 	return result;
 }
+
+std::string Stone::toString()
+{
+	return "stone";
+}

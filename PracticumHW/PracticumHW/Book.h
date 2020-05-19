@@ -16,13 +16,11 @@ public:
 	std::vector<Element*> razparchatosani;
 	Element* getPhilosophersStone();
 
-	//void findComposition(); // used to search within the formulas
 	Formula* getFormula(Element*);
 
 private:
 	std::vector<Formula*> formulas;
 	std::vector<Formula*> validFormulas;
-	//void transferInternals(const std::vector<Formula*>&);
 	void validateFormulas(); // seeds validFormulas
 };
 

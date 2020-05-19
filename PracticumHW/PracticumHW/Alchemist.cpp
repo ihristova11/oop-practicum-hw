@@ -12,11 +12,29 @@ Alchemist::Alchemist(const Book& book, std::vector<std::pair<int, Element*>> ele
 
 bool Alchemist::canComposePhilosophersStone()
 {
-	razparchatosai(this->book.getPhilosophersStone());
-	return false; // shtoto to sig nqma da trygne i bez tva
+	splitComposition(this->book.getPhilosophersStone());
+
+	for (Element* e : this->book.razparchatosani)
+	{
+		for (std::pair<int, Element*> p : this->elementsQuantity)
+		{
+			if (p.second->toString() == e->toString())
+			{
+				--p.first;
+			}
+		}
+	}
+
+	for (std::pair<int, Element*> p : this->elementsQuantity)
+	{
+		if (p.first < 0)
+			return false;
+	}
+
+	return true;
 }
 
-void Alchemist::razparchatosai(Element* element)
+void Alchemist::splitComposition(Element* element) // works ok, needs refactoring
 {
 	if (element->getType() != ElementType::COMPOSITE && element->getType() != ElementType::PHILOSOPHERS_STONE)
 	{
@@ -26,8 +44,8 @@ void Alchemist::razparchatosai(Element* element)
 	Formula* formula = this->book.getFormula(element);
 	if (formula == nullptr)
 		return; // tuka ne e dobre polojenieto
-	for (Element* e: formula->getElements())
+	for (Element* e : formula->getElements())
 	{
-		razparchatosai(e);
+		splitComposition(e);
 	}
 }

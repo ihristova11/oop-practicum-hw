@@ -25,3 +25,8 @@ std::unordered_set<ElementType> PhilosophersStone::getInteractions()
 
 	return result;
 }
+
+std::string PhilosophersStone::toString()
+{
+	return "phil";
+}

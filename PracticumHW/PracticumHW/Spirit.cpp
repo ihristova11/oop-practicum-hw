@@ -14,3 +14,8 @@ std::unordered_set<ElementType> Spirit::getInteractions()
 {
 	return Air::getInteractions();
 }
+
+std::string Spirit::toString()
+{
+	return "spirit";
+}

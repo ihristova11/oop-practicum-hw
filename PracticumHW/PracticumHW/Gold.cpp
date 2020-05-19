@@ -24,3 +24,8 @@ std::unordered_set<ElementType> Gold::getInteractions()
 
 	return result;
 }
+
+std::string Gold::toString()
+{
+	return "gold";
+}

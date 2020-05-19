@@ -14,3 +14,8 @@ std::unordered_set<ElementType> Fire::getInteractions()
 {
 	return std::unordered_set<ElementType> {ElementType::FIRE, ElementType::WATER, ElementType::EARTH};
 }
+
+std::string Fire::toString()
+{
+	return "fire";
+}
