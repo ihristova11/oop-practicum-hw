@@ -2,7 +2,7 @@
 
 Spirit::Spirit()
 {
-	Element::type == ElementType::COMPOSITE;
+	Element::type = ElementType::COMPOSITE;
 }
 
 std::unordered_set<ElementType> Spirit::getCompositions()

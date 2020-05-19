@@ -2,7 +2,7 @@
 
 Water::Water()
 {
-	Element::type == ElementType::WATER;
+	Element::type = ElementType::WATER;
 }
 
 std::unordered_set<ElementType> Water::getCompositions()

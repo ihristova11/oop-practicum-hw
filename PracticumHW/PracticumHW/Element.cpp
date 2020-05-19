@@ -41,42 +41,42 @@ bool Element::canInteractWith(const std::vector<Element*>& elements)
 			}
 
 			// base should interact with getCompositions()
-			std::unordered_set<ElementType> compositeParents = composite->getCompositions();
-			std::unordered_set<ElementType> baseInteractions = base->getInteractions();
-			for (ElementType et : compositeParents)
-			{
-				std::unordered_set<ElementType>::iterator foundCompositeParent = baseInteractions.find(et);
-				if (foundCompositeParent == baseInteractions.end()) // not found
-				{
-					canInteract = false;
-					end = true;
-					break;
-				}
-			}
-			if (end) break;
+			//std::unordered_set<ElementType> compositeParents = composite->getCompositions();
+			//std::unordered_set<ElementType> baseInteractions = base->getInteractions();
+			//for (ElementType et : compositeParents)
+			//{
+			//	std::unordered_set<ElementType>::iterator foundCompositeParent = baseInteractions.find(et);
+			//	if (foundCompositeParent == baseInteractions.end()) // not found
+			//	{
+			//		canInteract = false;
+			//		end = true;
+			//		break;
+			//	}
+			//}
+			//if (end) break;
 
 		}
 		else if (el->type == ElementType::COMPOSITE && this->type == ElementType::COMPOSITE) // both are composite
 		{
-			// first interacts with parents
-			std::unordered_set<ElementType> secondParents = this->getCompositions();
-			for (ElementType et : secondParents)
-			{
-				std::unordered_set<ElementType> firstInteractions = el->getInteractions();
-				std::unordered_set<ElementType>::iterator foundParent = firstInteractions.find(et);
-				if (foundParent == firstInteractions.end())
-				{
-					canInteract = false; 
-					end = true;
-					break;
-				}
-			}
+			//// first interacts with parents
+			//std::unordered_set<ElementType> secondParents = this->getCompositions();
+			//for (ElementType et : secondParents)
+			//{
+			//	std::unordered_set<ElementType> firstInteractions = el->getInteractions();
+			//	std::unordered_set<ElementType>::iterator foundParent = firstInteractions.find(et);
+			//	if (foundParent == firstInteractions.end())
+			//	{
+			//		canInteract = false; 
+			//		end = true;
+			//		break;
+			//	}
+			//}
 
-			if (end) break;
+			//if (end) break;
 
 			//second interacts with parents
 			std::unordered_set<ElementType> firstParents = el->getCompositions();
-			for (ElementType et : secondParents)
+			for (ElementType et : firstParents)
 			{
 				std::unordered_set<ElementType> secondInteractions = this->getInteractions();
 				std::unordered_set<ElementType>::iterator foundParent = secondInteractions.find(et);
