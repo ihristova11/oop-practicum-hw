@@ -46,5 +46,6 @@ int main()
 	std::cout << alchemist.canComposePhilosophersStone() << std::endl;
 
 
+
 	// todo: !!! delete dynamically allocated memory
 }
