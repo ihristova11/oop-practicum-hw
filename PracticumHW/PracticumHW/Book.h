@@ -14,8 +14,8 @@ public:
 	Book& operator=(const Book&);
 
 	std::vector<Element*> splitElements;
-	Element* getPhilosophersStone();
 
+	Element* getPhilosophersStone();
 	Formula* getFormula(Element*);
 
 private:

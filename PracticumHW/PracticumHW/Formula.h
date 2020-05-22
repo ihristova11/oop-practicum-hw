@@ -17,7 +17,7 @@ protected:
 	Element* result;
 	std::vector<Element*> elements;
 
-	virtual std::pair<Element*, Element*> execute() = 0; // ? do we need this - probably yes
+	virtual std::pair<Element*, Element*> execute() = 0;
 	virtual bool containsElement(const Element*) = 0;
 };
 

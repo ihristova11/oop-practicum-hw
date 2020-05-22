@@ -10,9 +10,8 @@ class Alchemist
 {
 public:
 	Alchemist(const Book&, std::vector<std::pair<int, Element*>>);
-	bool canComposePhilosophersStone();
 
-	Element* calc(std::vector<Element*> elements, std::vector<Element*> res);
+	bool canComposePhilosophersStone();
 	void splitComposition(Element*);
 private:
 	Book book;
