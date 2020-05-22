@@ -26,7 +26,7 @@ int main()
 		new Equation(std::vector<Element*> {new Fire, new Water, new Earth}, new Gold),
 		new Equation(std::vector<Element*> {new Water, new Earth}, new Stone),
 		new Equation(std::vector<Element*> {new Spirit, new Air}, new Energy),
-		new Equation(std::vector<Element*> {new Gold, new Spirit, new Earth},
+		new Equation(std::vector<Element*> {new Gold, new Spirit, new Energy},
 		new PhilosophersStone),
 		new Decomposition(new Fire),
 		new Equation(std::vector<Element*> {new Energy, new Earth}, new Stone)
