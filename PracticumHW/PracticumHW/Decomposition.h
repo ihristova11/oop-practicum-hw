@@ -11,8 +11,7 @@ class Decomposition : public Formula
 public:
 	Decomposition(Element*);
 private: 
-	virtual std::pair<Element*, Element*> execute() override;
-	virtual bool containsElement(const Element*) override;
+	virtual std::vector<Element*> execute() override;
 	virtual bool isValid() override;
 };
 

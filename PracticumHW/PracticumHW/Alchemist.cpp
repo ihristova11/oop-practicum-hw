@@ -12,7 +12,10 @@ Alchemist::Alchemist(const Book& book, std::vector<std::pair<int, Element*>> ele
 
 bool Alchemist::canComposePhilosophersStone()
 {
-	this->splitComposition(this->book.getPhilosophersStone());
+	// loop thru valid functions - return result
+
+
+	this->splitComposition(this->book.getPhilosophersStone(), nullptr);
 
 	if (this->book.splitElements.size() <= 0)
 		return false;
@@ -37,12 +40,14 @@ bool Alchemist::canComposePhilosophersStone()
 	return true;
 }
 
-void Alchemist::splitComposition(Element* element) // works ok, needs refactoring
+void Alchemist::splitComposition(Element* element, Formula* f = nullptr) // works ok, needs refactoring
 {
 	if (element->getType() != ElementType::COMPOSITE && element->getType() != ElementType::PHILOSOPHERS_STONE)
 	{
+		if (f != nullptr)
+			//f->execute();
 
-		// execute can push to a book's collection
+		// execute can push to a book's collection - not a good idea
 		this->book.splitElements.push_back(element);
 		return;
 	}
@@ -51,6 +56,6 @@ void Alchemist::splitComposition(Element* element) // works ok, needs refactorin
 		return;
 	for (Element* e : formula->getElements())
 	{
-		this->splitComposition(e);
+		this->splitComposition(e, formula);
 	}
 }

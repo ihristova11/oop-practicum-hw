@@ -28,9 +28,6 @@
     <Filter Include="Header Files\Common">
       <UniqueIdentifier>{bf9645a0-292c-4129-8c00-61c63fba8458}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Common">
-      <UniqueIdentifier>{0fd04155-9937-4921-a5b5-26668d866867}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Air.cpp">
@@ -81,8 +78,11 @@
     <ClCompile Include="Decomposition.cpp">
       <Filter>Source Files\Formulas</Filter>
     </ClCompile>
+    <ClCompile Include="Identity.cpp">
+      <Filter>Source Files\Formulas</Filter>
+    </ClCompile>
     <ClCompile Include="Formula.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Formulas</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +136,9 @@
     </ClInclude>
     <ClInclude Include="ElementType.h">
       <Filter>Header Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Identity.h">
+      <Filter>Header Files\Formulas</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

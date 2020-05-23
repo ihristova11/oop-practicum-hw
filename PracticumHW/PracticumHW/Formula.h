@@ -17,8 +17,8 @@ protected:
 	Element* result;
 	std::vector<Element*> elements;
 
-	virtual std::pair<Element*, Element*> execute() = 0;
-	virtual bool containsElement(const Element*) = 0;
+	virtual std::vector<Element*> execute() = 0;
+	virtual bool containsElement(const Element*);
 };
 
 #endif // !FORMULA_H

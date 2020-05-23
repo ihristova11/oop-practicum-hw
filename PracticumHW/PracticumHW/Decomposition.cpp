@@ -5,25 +5,26 @@ Decomposition::Decomposition(Element* element)
 	Formula::elements = std::vector<Element*>{ element };
 }
 
-std::pair<Element*, Element*> Decomposition::execute()
+std::vector<Element*> Decomposition::execute()
 {
 	// if base or phil... - return pair of base elements
-	// if composite of one - return a pair of this element
+	// if composite of one - return a pair of this element would be one case with this at the bottom
 	// if composite - return a pair of elements
-	std::pair<Element*, Element*> result;
+
+			/*std::pair<Element*, Element*> result;*/
 	if (this->elements[0]->getType() != ElementType::COMPOSITE)
-		return std::pair<Element*, Element*> {this->elements[0], this->elements[0] };
-	//if(this->elements[0]->getCompositions().size() == 1)
-	//	return std::pair<Element*, Element*> {*(this->elements[0]->getCompositions().begin()), 
-	//	* (this->elements[0]->getCompositions().begin()) };
+	{
+		return std::vector<Element*> {this->elements[0], this->elements[0] };
+	}
+	else
+	{
+		// construct elements
+		this->getElements()[0]->getCompositions();
+	}
 
 
-	return std::pair<Element*, Element*>();
-}
 
-bool Decomposition::containsElement(const Element*) //not sure if needed ?
-{
-	return false;
+	return std::vector<Element*>();
 }
 
 bool Decomposition::isValid()

@@ -13,8 +13,7 @@ public:
 	Equation(std::vector<Element*>, Element*);
 
 private:
-	virtual bool containsElement(const Element*) override;
-	virtual std::pair<Element*, Element*> execute() override;
+	virtual std::vector<Element*> execute() override;
 	virtual bool isValid() override;
 };
 

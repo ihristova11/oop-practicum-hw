@@ -1,29 +1,18 @@
 #include "Equation.h"
+
 #include <vector>
 #include <utility>
 
 Equation::Equation(std::vector<Element*> elements, Element* result)
 {
 	Formula::result = result;
-	copy(elements.begin(), elements.end(), back_inserter(this->elements)); // check it USE DIFF IMPLEMENTATION
+	copy(elements.begin(), elements.end(), back_inserter(this->elements));
 }
 
-bool Equation::containsElement(const Element* element)
+std::vector<Element*> Equation::execute()
 {
-	for (Element* e : this->elements)
-	{
-		if (e == element)
-		{
-			return true;
-		}
-	}
-	return false;
-}
-
-std::pair<Element*, Element*> Equation::execute()
-{
-
-	return std::pair<Element*, Element*>();
+	// update this with the recursion
+	return std::vector<Element*> { this->elements[0] };
 }
 
 bool Equation::isValid() // todo: check 
