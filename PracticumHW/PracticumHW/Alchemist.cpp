@@ -4,7 +4,7 @@
 #include <utility>
 #include <vector>
 
-Alchemist::Alchemist(const Book& book, std::vector<std::pair<int, Element*>> elementsQuantity)
+Alchemist::Alchemist(const Book& book, std::vector<std::pair<Element*, int>> elementsQuantity)
 	: book(book)
 {
 	copy(elementsQuantity.begin(), elementsQuantity.end(), back_inserter(this->elementsQuantity));
@@ -12,35 +12,23 @@ Alchemist::Alchemist(const Book& book, std::vector<std::pair<int, Element*>> ele
 
 bool Alchemist::canComposePhilosophersStone()
 {
-	for (Formula* f : this->book.getValidFormulas())
-	{
-		this->book.setAllElements(f->execute());
-	}
-
-	for (Element* el : this->book.getAllElements())
-	{
-		this->splitComposition(el);
-	}
-
-	//this->splitComposition(this->book.getElement(ElementType::PHILOSOPHERS_STONE));
+	this->splitComposition(this->book.getElement(ElementType::PHILOSOPHERS_STONE));
 
 	if (this->book.splitElements.size() <= 0)
 		return false;
 
 	for (Element* e : this->book.splitElements)
 	{
-		for (std::pair<int, Element*> p : this->elementsQuantity)
+		for (int i = 0; i < this->elementsQuantity.size(); i++)
 		{
-			if (p.second->toString() == e->toString())
-			{
-				--p.first;
-			}
+			if (this->elementsQuantity[i].first->toString() == e->toString())
+				this->elementsQuantity[i].second--;
 		}
 	}
 
-	for (std::pair<int, Element*> p : this->elementsQuantity)
+	for (std::pair<Element*, int> p : this->elementsQuantity)
 	{
-		if (p.first < 0)
+		if (p.second < 0)
 			return false;
 	}
 
@@ -48,7 +36,7 @@ bool Alchemist::canComposePhilosophersStone()
 }
 
 // process all elements
-void Alchemist::splitComposition(Element* element) // works ok, needs refactoring
+void Alchemist::splitComposition(Element* element)
 {
 	if (element->getType() != ElementType::COMPOSITE && element->getType() != ElementType::PHILOSOPHERS_STONE)
 	{
@@ -58,7 +46,7 @@ void Alchemist::splitComposition(Element* element) // works ok, needs refactorin
 	Formula* formula = this->book.getFormula(element);
 	if (formula == nullptr)
 		return;
-	for (Element* e : formula->getElements())
+	for (Element* e : formula->execute())
 	{
 		this->splitComposition(e);
 	}

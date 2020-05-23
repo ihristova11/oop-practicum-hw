@@ -9,6 +9,7 @@
 class Formula
 {
 public: 
+	Formula();
 	virtual bool isValid() = 0;
 	
 	Element* getResult() const;

@@ -1,5 +1,8 @@
 #include "Formula.h"
 
+Formula::Formula() : result(nullptr)
+{ }
+
 Element* Formula::getResult() const
 {
 	return this->result;

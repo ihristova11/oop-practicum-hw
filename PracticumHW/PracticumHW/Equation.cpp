@@ -14,13 +14,12 @@ std::vector<Element*> Equation::execute()
 	return this->elements;
 }
 
-bool Equation::isValid() // todo: check 
+bool Equation::isValid()
 {
 	bool isValid = true;
 
 	for (int i = 0; i < this->elements.size(); i++)
 	{
-		// check if element can interact 
 		std::vector<Element*> temp;
 		temp = this->elements;
 		temp.erase(temp.begin() + i);
