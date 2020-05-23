@@ -50,6 +50,24 @@ Formula* Book::getFormula(Element* e)
 	return nullptr;
 }
 
+std::vector<Formula*> Book::getValidFormulas()
+{
+	return this->validFormulas;
+}
+
+std::vector<Element*> Book::getAllElements()
+{
+	return this->allElements;
+}
+
+void Book::setAllElements(std::vector<Element*> elements)
+{
+	for (Element* el : elements)
+	{
+		this->allElements.push_back(el);
+	}
+}
+
 void Book::validateFormulas()
 {
 	for (Formula* formula : this->formulas)

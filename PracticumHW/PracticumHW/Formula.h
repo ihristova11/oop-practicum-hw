@@ -13,11 +13,12 @@ public:
 	
 	Element* getResult() const;
 	std::vector<Element*> getElements() const;
+	virtual std::vector<Element*> execute() = 0;
+
 protected:
 	Element* result;
 	std::vector<Element*> elements;
 
-	virtual std::vector<Element*> execute() = 0;
 	virtual bool containsElement(const Element*);
 };
 

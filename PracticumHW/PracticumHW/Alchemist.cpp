@@ -12,11 +12,17 @@ Alchemist::Alchemist(const Book& book, std::vector<std::pair<int, Element*>> ele
 
 bool Alchemist::canComposePhilosophersStone()
 {
-	// get all elements in vector
-	// loop thru valid functions - return result
-	
+	for (Formula* f : this->book.getValidFormulas())
+	{
+		this->book.setAllElements(f->execute());
+	}
 
-	this->splitComposition(this->book.getElement(ElementType::PHILOSOPHERS_STONE));
+	for (Element* el : this->book.getAllElements())
+	{
+		this->splitComposition(el);
+	}
+
+	//this->splitComposition(this->book.getElement(ElementType::PHILOSOPHERS_STONE));
 
 	if (this->book.splitElements.size() <= 0)
 		return false;

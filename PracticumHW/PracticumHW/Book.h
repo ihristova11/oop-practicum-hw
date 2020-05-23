@@ -13,14 +13,18 @@ public:
 	Book& operator=(const Book&);
 
 	std::vector<Element*> splitElements;
-	std::vector<Element*> allElements;
 
 	Element* getElement(ElementType);
 	Formula* getFormula(Element*);
+	std::vector<Formula*> getValidFormulas();
+	std::vector<Element*> getAllElements();
 
+	void setAllElements(std::vector<Element*>);
 private:
 	std::vector<Formula*> formulas;
 	std::vector<Formula*> validFormulas;
+	std::vector<Element*> allElements;
+
 	void validateFormulas(); // seeds validFormulas
 };
 
