@@ -10,6 +10,7 @@ class Alchemist
 {
 public:
 	Alchemist(const Book&, std::vector<std::pair<Element*, int>>);
+	~Alchemist();
 
 	bool canComposePhilosophersStone();
 	void splitComposition(Element*);

@@ -10,6 +10,11 @@ Alchemist::Alchemist(const Book& book, std::vector<std::pair<Element*, int>> ele
 	copy(elementsQuantity.begin(), elementsQuantity.end(), back_inserter(this->elementsQuantity));
 }
 
+Alchemist::~Alchemist()
+{
+	this->elementsQuantity.clear();
+}
+
 bool Alchemist::canComposePhilosophersStone()
 {
 	this->splitComposition(this->book.getElement(ElementType::PHILOSOPHERS_STONE));

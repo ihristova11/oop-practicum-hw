@@ -8,7 +8,6 @@ Book::Book(const std::vector<Formula*>& formulas)
 
 Book::Book(const Book& other)
 {
-	//this->transferInternals(other.formulas);
 	this->formulas = other.formulas;
 	this->validFormulas = other.validFormulas;
 	this->splitElements = other.splitElements;
@@ -24,6 +23,12 @@ Book& Book::operator=(const Book& other)
 	}
 
 	return *this;
+}
+
+Book::~Book()
+{
+	this->validFormulas.clear();
+	this->formulas.clear();
 }
 
 Element* Book::getElement(ElementType et)
@@ -42,7 +47,8 @@ Formula* Book::getFormula(Element* e)
 {
 	for (Formula* formula : this->validFormulas)
 	{
-		if (formula->getResult() != nullptr && formula->getResult()->toString() == e->toString()) // or tostring()
+		if (formula->getResult() != nullptr 
+			&& formula->getResult()->toString() == e->toString())
 		{
 			return formula;
 		}
@@ -53,19 +59,6 @@ Formula* Book::getFormula(Element* e)
 std::vector<Formula*> Book::getValidFormulas()
 {
 	return this->validFormulas;
-}
-
-std::vector<Element*> Book::getAllElements()
-{
-	return this->allElements;
-}
-
-void Book::setAllElements(std::vector<Element*> elements)
-{
-	for (Element* el : elements)
-	{
-		this->allElements.push_back(el);
-	}
 }
 
 void Book::validateFormulas()
