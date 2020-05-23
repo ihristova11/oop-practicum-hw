@@ -11,8 +11,7 @@ Equation::Equation(std::vector<Element*> elements, Element* result)
 
 std::vector<Element*> Equation::execute()
 {
-	// update this with the recursion
-	return std::vector<Element*> { this->elements[0] };
+	return this->elements;
 }
 
 bool Equation::isValid() // todo: check 

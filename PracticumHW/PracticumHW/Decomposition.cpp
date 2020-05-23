@@ -12,7 +12,8 @@ std::vector<Element*> Decomposition::execute()
 	// if composite - return a pair of elements
 
 			/*std::pair<Element*, Element*> result;*/
-	if (this->elements[0]->getType() != ElementType::COMPOSITE)
+	if (this->elements[0]->getType() != ElementType::COMPOSITE 
+		|| this->elements[0]->getType() == ElementType::PHILOSOPHERS_STONE)
 	{
 		return std::vector<Element*> {this->elements[0], this->elements[0] };
 	}

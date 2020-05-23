@@ -12,7 +12,7 @@ public:
 	Alchemist(const Book&, std::vector<std::pair<int, Element*>>);
 
 	bool canComposePhilosophersStone();
-	void splitComposition(Element*, Formula*);
+	void splitComposition(Element*);
 private:
 	Book book;
 	std::vector<std::pair<int, Element*>> elementsQuantity;

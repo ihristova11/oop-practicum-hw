@@ -8,14 +8,14 @@
 class Book
 {
 public: 
-	Book();
 	Book(const std::vector<Formula*>&);
 	Book(const Book&);
 	Book& operator=(const Book&);
 
 	std::vector<Element*> splitElements;
+	std::vector<Element*> allElements;
 
-	Element* getPhilosophersStone();
+	Element* getElement(ElementType);
 	Formula* getFormula(Element*);
 
 private:

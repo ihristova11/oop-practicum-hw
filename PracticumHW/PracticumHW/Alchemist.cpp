@@ -5,17 +5,18 @@
 #include <vector>
 
 Alchemist::Alchemist(const Book& book, std::vector<std::pair<int, Element*>> elementsQuantity)
+	: book(book)
 {
-	this->book = book;
 	copy(elementsQuantity.begin(), elementsQuantity.end(), back_inserter(this->elementsQuantity));
 }
 
 bool Alchemist::canComposePhilosophersStone()
 {
+	// get all elements in vector
 	// loop thru valid functions - return result
+	
 
-
-	this->splitComposition(this->book.getPhilosophersStone(), nullptr);
+	this->splitComposition(this->book.getElement(ElementType::PHILOSOPHERS_STONE));
 
 	if (this->book.splitElements.size() <= 0)
 		return false;
@@ -40,14 +41,11 @@ bool Alchemist::canComposePhilosophersStone()
 	return true;
 }
 
-void Alchemist::splitComposition(Element* element, Formula* f = nullptr) // works ok, needs refactoring
+// process all elements
+void Alchemist::splitComposition(Element* element) // works ok, needs refactoring
 {
 	if (element->getType() != ElementType::COMPOSITE && element->getType() != ElementType::PHILOSOPHERS_STONE)
 	{
-		if (f != nullptr)
-			//f->execute();
-
-		// execute can push to a book's collection - not a good idea
 		this->book.splitElements.push_back(element);
 		return;
 	}
@@ -56,6 +54,6 @@ void Alchemist::splitComposition(Element* element, Formula* f = nullptr) // work
 		return;
 	for (Element* e : formula->getElements())
 	{
-		this->splitComposition(e, formula);
+		this->splitComposition(e);
 	}
 }

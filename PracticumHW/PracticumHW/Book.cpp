@@ -1,8 +1,5 @@
 #include "Book.h"
 
-Book::Book()
-{ }
-
 Book::Book(const std::vector<Formula*>& formulas)
 {
 	this->formulas = formulas;
@@ -29,11 +26,11 @@ Book& Book::operator=(const Book& other)
 	return *this;
 }
 
-Element* Book::getPhilosophersStone()
+Element* Book::getElement(ElementType et)
 {
 	for (Formula* f : this->formulas)
 	{
-		if (f->getResult()->getType() == ElementType::PHILOSOPHERS_STONE)
+		if (f->getResult()->getType() == et)
 		{
 			return f->getResult();
 		}

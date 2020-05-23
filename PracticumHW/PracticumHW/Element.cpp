@@ -4,12 +4,11 @@
 
 bool Element::operator==(const Element& rhs)
 {
-	return typeid(this).name() == typeid(rhs).name(); // check it again 
+	return typeid(this).name() == typeid(rhs).name();
 }
 
 bool Element::canInteractWith(const std::vector<Element*>& elements)
 {
-	// works for base elements only, should work with composite too
 	bool canInteract = true;
 	bool end = false;
 
