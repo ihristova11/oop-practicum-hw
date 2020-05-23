@@ -5,7 +5,7 @@
 #include "Earth.h"
 #include "Fire.h"
 
-class Metal : public Fire, public Earth, public Element
+class Metal : public virtual Fire, public Earth, public Element
 {
 public:
 	Metal();
