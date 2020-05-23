@@ -32,6 +32,7 @@ std::vector<Element*> Decomposition::execute()
 
 bool Decomposition::isValid()
 {
+	// always true
 	return true;
 }
 

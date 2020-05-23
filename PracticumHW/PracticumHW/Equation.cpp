@@ -18,10 +18,9 @@ bool Equation::isValid()
 {
 	bool isValid = true;
 
-	for (int i = 0; i < this->elements.size(); i++)
+	for (size_t i = 0; i < this->elements.size(); i++)
 	{
-		std::vector<Element*> temp;
-		temp = this->elements;
+		std::vector<Element*> temp = this->elements;
 		temp.erase(temp.begin() + i);
 		isValid = isValid && this->elements[i]->canInteractWith(temp);
 	}

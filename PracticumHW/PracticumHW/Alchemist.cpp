@@ -19,7 +19,7 @@ bool Alchemist::canComposePhilosophersStone()
 
 	for (Element* e : this->book.splitElements)
 	{
-		for (int i = 0; i < this->elementsQuantity.size(); i++)
+		for (size_t i = 0; i < this->elementsQuantity.size(); i++)
 		{
 			if (this->elementsQuantity[i].first->toString() == e->toString())
 				this->elementsQuantity[i].second--;

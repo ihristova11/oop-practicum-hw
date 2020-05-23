@@ -48,4 +48,8 @@ int main()
 
 
 	// todo: !!! delete dynamically allocated memory
+	for (Formula* f : formulas)
+	{
+		delete f;
+	}
 }
