@@ -5,7 +5,7 @@
 #include "Water.h"
 #include "Air.h"
 
-class Energy : public Air, public Water, virtual public Element
+class Energy : public Air, public Water
 {
 public:
 	Energy();

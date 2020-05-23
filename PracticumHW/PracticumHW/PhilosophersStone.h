@@ -7,7 +7,7 @@
 #include "Earth.h"
 #include "Fire.h"
 
-class PhilosophersStone : public Air, public Water, public Earth, public Fire, virtual public Element
+class PhilosophersStone : public Air, public Water, public Earth, public Fire
 {
 public:
 	PhilosophersStone();

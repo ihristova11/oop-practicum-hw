@@ -4,7 +4,7 @@
 #include "Element.h"
 #include "Metal.h"
 
-class Gold : public Metal, virtual public Element
+class Gold : public Metal
 {
 public:
 	Gold();

@@ -3,7 +3,7 @@
 
 #include "Element.h"
 
-class Earth : public Element
+class Earth : public virtual Element
 {
 public:
 	Earth();

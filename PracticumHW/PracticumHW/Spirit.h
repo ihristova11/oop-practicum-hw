@@ -4,7 +4,7 @@
 #include "Element.h"
 #include "Air.h"
 
-class Spirit : public Air, public virtual Element
+class Spirit : public Air
 {
 public:
 	Spirit();

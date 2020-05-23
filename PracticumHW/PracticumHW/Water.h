@@ -3,7 +3,7 @@
 
 #include "Element.h"
 
-class Water : public Element
+class Water : public virtual Element
 {
 public:
 	Water();
